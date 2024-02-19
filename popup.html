@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pixel Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            min-width: 200px;
+            min-height: 100px;
+        }
+        .toggle-container {
+            display: inline-block;
+            position: relative;
+            width: 60px;
+            height: 34px;
+        }
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 34px;
+            transition: .4s;
+        }
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            border-radius: 50%;
+            transition: .4s;
+        }
+        input:checked + .toggle-slider {
+            background-color: #4CAF50;
+        }
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
+        input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tracking Pixel Detector</h1>
+    <label class="toggle-container">
+        <input type="checkbox" id="toggleButton">
+        <span class="toggle-slider"></span>
+    </label>
+    <script src="popup.js"></script>
+</body>
+</html>
