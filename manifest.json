@@ -5,8 +5,15 @@
     "description": "Description of your extension",
     "permissions": [
       "scripting",
-      "webRequest"
+      "webRequest",
+      "tabs",
+      "activeTab",
+      "storage"
     ],
+    "options_page": "options.html",
+    "action": {
+        "default_popup": "popup.html"
+    },
     "background": {
       "service_worker": "background.js"
     },
@@ -19,5 +26,6 @@
         "js": ["content.js"]
       }
     ]
-  }
+}
+  
   
